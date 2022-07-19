@@ -25,64 +25,97 @@
 			font-family: 'GmarketSansBold';
 			font-weight: bold;
 			font-size: 11pt;
+			text-align: left;
 		}
 		
 		
 		div {
- 			border: 1px orange solid; 
+/*    			border: 1px orange solid; */
 			font-family: 'GmarketSansLight';
 			font-size: 9pt;
-		}
-				
+			text-align: center;
+		}		
 		
 	</style>
 	
 </head>
 <body>
 	<form action="">
-		<div class="container">			
+		<nav class="navbar navbar-dark bg-dark sticky-top">
+	  		<div class="container-fluid ">
+		    	<a class="navbar-brand" href="#">SBS</a>		
+    			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	  		<span class="navbar-toggler-icon"></span>
+		    	</button>    	
+		    	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        		<li class="nav-item">
+		          			<a class="nav-link active" aria-current="page" href="#" style="text-align: left;">로그아웃</a>
+		        		</li>
+	        		</ul>
+        		</div>
+	  		</div>	
+		</nav>
+		<br>		
+		<div class="container">	
 			<div class="row">
-				<div class="col" align="center">
-					신규가입
-				</div>
+				<ul class="nav">
+					<li class="nav-item">
+				    	<a class="nav-link active" href="#" style="nav-link-hover-color: black;">Home</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link" href="#">코드그룹관리</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link" href="#">회원관리</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link" href="#">회원관리</a>
+				  	</li>
+				</ul>
+			</div>		
+			<div class="row">
+				<h2 class="text-center fw-bold">신규 가입 <i class="fa-solid fa-file-pen"></i></h2>
 			</div>		
 			<hr>
 			<div class="row">
 				<div class="col-2 bigHead">
 					지원정보
 				</div>
-				<div class="col-4" style="background-color: #F8F7FC; text-align: center; ">
-					<i class="fa-solid fa-magnifying-glass"></i>
-				</div>
-				<div class="col offset-md-1">
-					<div class="row">
-						<div class="col-3">
+				<div class="col">
+					<div class="row mb-1">
+						<div class="col-4 pt-2">
 							지원분야
 						</div>
-						<div class="col">
-							<input class="form-control" type="text">					
+						<div class="col gx-0">
+							<input class="form-control form-control-sm" type="text">					
 						</div>	
 					</div>
-					<div class="row">
-						<div class="col-3">
+					<div class="row mb-1">
+						<div class="col-4 pt-2">
 						경력구분
 						</div>
-						<div class="col">
+						<div class="col gx-0">
 							<select class="form-select form-select-sm">
 								<option value="1">신입</option>
 								<option value="2">경력</option>
 							</select>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-3">
+					<div class="row mb-1">
+						<div class="col-4 pt-2">
 							희망연봉
 						</div>
-						<div class="col">
-						
+						<div class="col gx-0">
+							<input class="form-control form-control-sm" type="text">
 						</div>
 					</div>					
 				</div>				
+				<div class="col-2 offset-md-1 pt-5" style="background-color: #F8F7FC; text-align: center; ">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</div>
+				<div class="col-2">
+				</div>
 			</div> 	
 			<hr>
 			<div class="row">
@@ -90,76 +123,74 @@
 					기본정보
 				</div>
 				<div class="col">
-					<div class="row">
-						<div class="col-2">
+					<div class="row mb-1">
+						<div class="col-2 pt-2">
 							성명
 						</div>
-						<div class="col">
-						
+						<div class="col gx-0">
+							<input class="form-control form-control-sm" type="text">
 						</div>
-						<div class="col-2">
+						<div class="col-2 pt-2">
 							한문
 						</div>
-						<div class="col">
-							
+						<div class="col gx-0">
+							<input class="form-control form-control-sm" type="text">
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-2">
+					<div class="row mb-1">
+						<div class="col-2 pt-2">
 							영문
 						</div>
-						<div class="col">
-						
+						<div class="col gx-0">
+							<input class="form-control form-control-sm" type="text">
 						</div>
-						<div class="col-2">
+						<div class="col-2 pt-2">
 							생년월일
 						</div>
-						<div class="col">
-							
+						<div class="col gx-0">
+							<input class="form-control form-control-sm" type="date">
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-2">
+					<div class="row mb-1">
+						<div class="col-2 pt-2">
 							연락처
 						</div>
-						<div class="col">
-						
+						<div class="col gx-0">
+							<input class="form-control form-control-sm" type="text">
 						</div>
-						<div class="col-2">
-							비상연락망
-						</div>
-						<div class="col">
-							
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-2">
-							E-mail
-						</div>
-						<div class="col">
-						
-						</div>
-						<div class="col-2">
+						<div class="col-2 pt-2">
 							나이
 						</div>
-						<div class="col">
-							
+						<div class="col gx-0">
+							<input class="form-control form-control-sm" type="number">
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-2">
+					<div class="row mb-1">
+						<div class="col-2 pt-2">
+							E-mail
+						</div>
+						<div class="col gx-0">
+							<div class="input-group input-group-sm">
+						  		<input class="form-control form-control-sm" type="text">
+						 		<span class="input-group-text input-group-text-sm">@</span>
+						 		<input class="form-control form-control-sm" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="row mb-1">
+						<div class="col-2 pt-2">
 							주소
 						</div>
-						<div class="col">
-							
+						<div class="col gx-0">
+							<input class="form-control form-control-sm" type="text">
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-2">
+					<div class="row mb-1">
+						<div class="col-2 pt-2">
 							취미
 						</div>
-						<div class="col">
-							
+						<div class="col gx-0">
+							<input class="form-control form-control-sm" type="text">
 						</div>
 					</div>
 				</div>
@@ -188,20 +219,29 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-5">
-							1
+						<div class="col-5 gx-1">
+							<div class="input-group input-group-sm">
+						  		<input class="form-control form-control-sm" type="date">
+						 		<span class="input-group-text input-group-text-sm">~</span>
+						 		<input class="form-control form-control-sm" type="date">
+							</div>
 						</div>
-						<div class="col-2">
-							
+						<div class="col-2 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>
-						<div class="col-1">
-							
+						<div class="col-1 gx-1">
+							<select class="form-select form-select-sm">
+								<option value="1">재학</option>
+								<option value="2">졸업</option>
+								<option value="3">중퇴</option>
+								<option value="4">휴학</option>
+							</select>
 						</div>
-						<div class="col-2">
-							
+						<div class="col-2 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>
-						<div class="col-2">
-							
+						<div class="col-2 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>
 					</div>
 				</div>				
@@ -213,25 +253,29 @@
 				</div>
 				<div class="col">
 					<div class="row">
-						<div class="col-4">
+						<div class="col-5">
 							연수기간
 						</div>
 						<div class="col-2">
 							연수기관
 						</div>
-						<div class="col-6">
+						<div class="col-5">
 							연수과정 및 내용
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-4">
-							1
+						<div class="col-5 gx-1">
+							<div class="input-group input-group-sm">
+						  		<input class="form-control form-control-sm" type="date">
+						 		<span class="input-group-text input-group-text-sm">~</span>
+						 		<input class="form-control form-control-sm" type="date">
+							</div>
 						</div>
-						<div class="col-2">
-							
+						<div class="col-2 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>
-						<div class="col-6">
-							
+						<div class="col-5 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>
 					</div>
 				</div>				
@@ -257,17 +301,17 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-3">
-							1
+						<div class="col-3 gx-1">
+							<input class="form-control form-control-sm" type="date">
 						</div>
-						<div class="col-3">
-							
+						<div class="col-3 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>
-						<div class="col-3">
-							
+						<div class="col-3 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>				
-						<div class="col-3">
-							
+						<div class="col-3 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>
 					</div>
 				</div>				
@@ -279,13 +323,13 @@
 				</div>
 				<div class="col">
 					<div class="row">
-						<div class="col-4">
+						<div class="col-5">
 							활동기간
 						</div>
 						<div class="col-2">
 							기관
 						</div>
-						<div class="col-3">
+						<div class="col-2">
 							담당업무
 						</div>				
 						<div class="col-3">
@@ -293,28 +337,32 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-4">
-							1
+						<div class="col-5 gx-1">
+							<div class="input-group input-group-sm">
+						  		<input class="form-control form-control-sm" type="date">
+						 		<span class="input-group-text input-group-text-sm">~</span>
+						 		<input class="form-control form-control-sm" type="date">
+							</div>
 						</div>
-						<div class="col-2">
-							
+						<div class="col-2 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>
-						<div class="col-3">
-							
+						<div class="col-2 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>				
-						<div class="col-3">
-							
+						<div class="col-3 gx-1">
+							<input class="form-control form-control-sm" type="text">
 						</div>
 					</div>	
 				</div>
 			</div>
 			<hr>
 			<div class="row">
-				<div class="col">
-					적용
+				<div class="col-1 offset-md-10">
+					<i class="fa-solid fa-square-xmark"> 취소</i>
 				</div>
-				<div class="col">
-					취소
+				<div class="col-1">
+					<i class="fa-solid fa-floppy-disk"> 적용</i>
 				</div>
 			</div>
 		</div>				
