@@ -196,13 +196,13 @@
 				</div>
 			</div>		
 			<hr>
-			<div class="row">
+			<div class="row"  id="schoolpoint">
 				<div class="col-2 bigHead">
 					학력사항
 				</div>
-				<div class="col">
+				<div class="col" id="schoolpoint2">
 					<div class="row">
-						<div class="col-5">
+						<div class="col-4">
 							기간
 						</div>
 						<div class="col-2">
@@ -216,21 +216,21 @@
 						</div>
 						<div class="col-2">
 							소재지
-						</div>
+						</div>						
 					</div>
 					<div class="row">
-						<div class="col-5 gx-1">
+						<div class="col-4 gx-1">
 							<div class="input-group input-group-sm">
-						  		<input class="form-control form-control-sm" type="date">
+						  		<input class="form-control form-control-sm" type="date" id="schoolStart">
 						 		<span class="input-group-text input-group-text-sm">~</span>
-						 		<input class="form-control form-control-sm" type="date">
+						 		<input class="form-control form-control-sm" type="date" id="schoolEnd">
 							</div>
 						</div>
 						<div class="col-2 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id="schoolName">
 						</div>
 						<div class="col-1 gx-1">
-							<select class="form-select form-select-sm">
+							<select class="form-select form-select-sm" id="schoolop">
 								<option value="1">재학</option>
 								<option value="2">졸업</option>
 								<option value="3">중퇴</option>
@@ -238,10 +238,15 @@
 							</select>
 						</div>
 						<div class="col-2 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id="schoolmajor">
 						</div>
 						<div class="col-2 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id="schoolLocate">
+						</div>
+						<div class="col">
+							<button type="button" class="btn btn-sm" onclick="addSchool();">
+								<i class="fa-solid fa-file-circle-plus"></i>
+							</button>
 						</div>
 					</div>
 				</div>				
@@ -372,5 +377,31 @@
 	</form>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/63aa3074b3.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
+	<script type="text/javascript">
+		function addSchool() {			
+			var tmp = '';	
+			tmp += '<div class="row">';
+		    tmp += '<div class="col-4">';
+		    tmp += $("#schoolStart").value + "~" + $("#schoolEnd").value;
+		    tmp += '</div>';
+		    tmp += '<div class="col-2">';
+		    tmp += $("#schoolName").value;
+		    tmp += '</div>';
+		    tmp += '<div class="col-1">';
+		    tmp += 1;
+		    tmp += '</div>';
+		    tmp += '<div class="col-2">';
+		    tmp += $("#schoolMajor").value;
+		    tmp += '</div>';
+		    tmp += '<div class="col-2">';
+		    tmp += $("#schoolLocate").value;
+		    tmp += '</div>';
+		    tmp += '</div>';
+		    
+ 			$("#schoolpoint2").append(tmp);
+			
+		}
+	</script>
 </body>
 </html>
