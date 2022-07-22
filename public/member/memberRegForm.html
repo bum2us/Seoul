@@ -196,11 +196,11 @@
 				</div>
 			</div>		
 			<hr>
-			<div class="row"  id="schoolpoint">
+			<div class="row">
 				<div class="col-2 bigHead">
 					학력사항
 				</div>
-				<div class="col" id="schoolpoint2">
+				<div class="col" id="schoolpoint">
 					<div class="row">
 						<div class="col-4">
 							기간
@@ -238,7 +238,7 @@
 							</select>
 						</div>
 						<div class="col-2 gx-1">
-							<input class="form-control form-control-sm" type="text" id="schoolmajor">
+							<input class="form-control form-control-sm" type="text" id="schoolMajor">
 						</div>
 						<div class="col-2 gx-1">
 							<input class="form-control form-control-sm" type="text" id="schoolLocate">
@@ -247,7 +247,7 @@
 							<button type="button" class="btn btn-sm" onclick="addSchool();">
 								<i class="fa-solid fa-file-circle-plus"></i>
 							</button>
-						</div>
+						</div>												
 					</div>
 				</div>				
 			</div>		
@@ -379,29 +379,74 @@
 	<script src="https://kit.fontawesome.com/63aa3074b3.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
 	<script type="text/javascript">
-		function addSchool() {			
+		
+		var count_school = 0;
+	
+		function removeThis(id){
+			$(id).remove();
+		}
+	
+		function addSchool() {
+			
+			var startDate = document.getElementById('schoolStart').value;			
+			var endDate = document.getElementById('schoolEnd').value;
+			var name = document.getElementById('schoolName').value;
+			var selector = document.getElementById('schoolop');
+			var schoolOp = selector.options[selector.selectedIndex].text;
+			var major = document.getElementById('schoolMajor').value;
+		    var locate = document.getElementById('schoolLocate').value;		    
 			var tmp = '';	
-			tmp += '<div class="row">';
-		    tmp += '<div class="col-4">';
-		    tmp += $("#schoolStart").value + "~" + $("#schoolEnd").value;
+			
+// 			var vdiv = document.createElement('div');
+// 			vdiv.setAttribute('class','row');
+// 			vdiv.setAttribute('id','school'+ count_school);
+// 			count_school++;
+			
+// 			vdiv.innerHTML += '<div class="col-3" id='+ count_school +'>';
+// 			vdiv.innerHTML += startDate + '~' + endDate;
+// 			vdiv.innerHTML += '</div>';
+// 			vdiv.innerHTML += '<div class="col-2">';
+// 			vdiv.innerHTML += name;
+// 			vdiv.innerHTML += '</div>';
+// 			vdiv.innerHTML += '<div class="col-1">';
+// 			vdiv.innerHTML += schoolOp;
+// 			vdiv.innerHTML += '</div>';
+// 			vdiv.innerHTML += '<div class="col-2">';
+// 			vdiv.innerHTML += major;
+// 			vdiv.innerHTML += '</div>';
+// 			vdiv.innerHTML += '<div class="col-2">';
+// 			vdiv.innerHTML += locate;
+// 			vdiv.innerHTML += '</div>';
+// 			vdiv.innerHTML += '<div class="col-1">';
+// 			vdiv.innerHTML += '<button class="btn btn-sm" type="button" onclick="removeThis();"><i class="fa-solid fa-xmark"></i></button>';			
+// 			vdiv.innerHTML += '</div>';
+			
+// 			$("#schoolpoint").append(vdiv);
+			
+			tmp += '<div class="row" id="'+'school'+ count_school +'">';
+		    tmp += '<div class="col-3">';
+		    tmp += startDate + '~' + endDate;
 		    tmp += '</div>';
 		    tmp += '<div class="col-2">';
-		    tmp += $("#schoolName").value;
+		    tmp += name;
 		    tmp += '</div>';
 		    tmp += '<div class="col-1">';
-		    tmp += 1;
+		    tmp += schoolOp;
 		    tmp += '</div>';
 		    tmp += '<div class="col-2">';
-		    tmp += $("#schoolMajor").value;
+		    tmp += major;
 		    tmp += '</div>';
 		    tmp += '<div class="col-2">';
-		    tmp += $("#schoolLocate").value;
+		    tmp += locate;
 		    tmp += '</div>';
+		    tmp += '<div class="col-2">';
+		    tmp += '<button class="btn btn-sm" type="button" onclick="removeThis(school'+ count_school++ +');"><i class="fa-solid fa-xmark"></i></button>';
 		    tmp += '</div>';
-		    
- 			$("#schoolpoint2").append(tmp);
-			
+		    tmp += '</div>';		    
+ 		$("#schoolpoint").append(tmp);	
+
 		}
-	</script>
+	</script>	
+	
 </body>
 </html>
