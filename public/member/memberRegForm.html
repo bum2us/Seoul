@@ -244,7 +244,7 @@
 							<input class="form-control form-control-sm" type="text" id="schoolLocate">
 						</div>
 						<div class="col">
-							<button type="button" class="btn btn-sm" onclick="addSchool();">
+							<button type="button" class="btn btn-sm" onclick="addData('school');">
 								<i class="fa-solid fa-file-circle-plus"></i>
 							</button>
 						</div>												
@@ -380,12 +380,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
 	<script type="text/javascript">
 		
+				
 		var count_school = 0;
 	
 		function removeThis(id){
 			$(id).remove();
 		}
-	
+		
+		function addData(){
+			
+		}
+		
 		function addSchool() {
 			
 			var startDate = document.getElementById('schoolStart').value;			
@@ -443,7 +448,7 @@
 		    tmp += '<button class="btn btn-sm" type="button" onclick="removeThis(school'+ count_school++ +');"><i class="fa-solid fa-xmark"></i></button>';
 		    tmp += '</div>';
 		    tmp += '</div>';		    
- 		$("#schoolpoint").append(tmp);	
+ 			$("#schoolpoint").append(tmp);	
 
 		}
 	</script>	
