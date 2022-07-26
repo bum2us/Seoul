@@ -200,7 +200,7 @@
 				<div class="col-2 bigHead">
 					학력사항
 				</div>
-				<div class="col" id="schoolpoint">
+				<div class="col" id="school_point">
 					<div class="row">
 						<div class="col-4">
 							기간
@@ -221,16 +221,16 @@
 					<div class="row">
 						<div class="col-4 gx-1">
 							<div class="input-group input-group-sm">
-						  		<input class="form-control form-control-sm" type="date" id="schoolStart">
+						  		<input class="form-control form-control-sm" type="date" id="school_dateRangeStart">
 						 		<span class="input-group-text input-group-text-sm">~</span>
-						 		<input class="form-control form-control-sm" type="date" id="schoolEnd">
+						 		<input class="form-control form-control-sm" type="date" id="school_dateRangeEnd">
 							</div>
 						</div>
 						<div class="col-2 gx-1">
-							<input class="form-control form-control-sm" type="text" id="schoolName">
+							<input class="form-control form-control-sm" type="text" id="school_Name">
 						</div>
 						<div class="col-1 gx-1">
-							<select class="form-select form-select-sm" id="schoolop">
+							<select class="form-select form-select-sm" id="school_type">
 								<option value="1">재학</option>
 								<option value="2">졸업</option>
 								<option value="3">중퇴</option>
@@ -238,14 +238,14 @@
 							</select>
 						</div>
 						<div class="col-2 gx-1">
-							<input class="form-control form-control-sm" type="text" id="schoolMajor">
+							<input class="form-control form-control-sm" type="text" id="school_major">
 						</div>
 						<div class="col-2 gx-1">
-							<input class="form-control form-control-sm" type="text" id="schoolLocate">
+							<input class="form-control form-control-sm" type="text" id="school_locate">
 						</div>
 						<div class="col">
-							<button type="button" class="btn btn-sm" onclick="addData('school');">
-								<i class="fa-solid fa-file-circle-plus"></i>
+							<button type="button" class="btn btn-sm" onclick="addData(1);">
+								<i class="fa-solid fa-file-circle-plus"> 추가</i>
 							</button>
 						</div>												
 					</div>
@@ -257,7 +257,7 @@
 					교육연수
 				</div>
 				<div class="col">
-					<div class="row">
+					<div class="row" id="edu_point">
 						<div class="col-5">
 							연수기간
 						</div>
@@ -269,19 +269,24 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-5 gx-1">
+						<div class="col-4 gx-1">
 							<div class="input-group input-group-sm">
-						  		<input class="form-control form-control-sm" type="date">
+						  		<input class="form-control form-control-sm" type="date" id="edu_dateRangeStart">
 						 		<span class="input-group-text input-group-text-sm">~</span>
-						 		<input class="form-control form-control-sm" type="date">
+						 		<input class="form-control form-control-sm" type="date" id= "edu_dateRangeEnd">
 							</div>
 						</div>
 						<div class="col-2 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id= "edu_Name">
 						</div>
 						<div class="col-5 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id= "edu_content">
 						</div>
+						<div class="col">
+							<button type="button" class="btn btn-sm" onclick="addData('2');">
+								<i class="fa-solid fa-file-circle-plus"> 추가</i>
+							</button>
+						</div>		
 					</div>
 				</div>				
 			</div>
@@ -291,7 +296,7 @@
 					자격사항
 				</div>
 				<div class="col">
-					<div class="row">
+					<div class="row" id="certi_point">
 						<div class="col-3">
 							취득일
 						</div>
@@ -306,18 +311,23 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-3 gx-1">
-							<input class="form-control form-control-sm" type="date">
+						<div class="col-2 gx-1">
+							<input class="form-control form-control-sm" type="date" id= "certi_date">
 						</div>
 						<div class="col-3 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id= "certi_Name">
 						</div>
 						<div class="col-3 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id= "certi_source">
 						</div>				
 						<div class="col-3 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id= "certi_skill">
 						</div>
+						<div class="col">
+							<button type="button" class="btn btn-sm" onclick="addData('3');">
+								<i class="fa-solid fa-file-circle-plus"> 추가</i>
+							</button>
+						</div>		
 					</div>
 				</div>				
 			</div>
@@ -327,7 +337,7 @@
 					경력사항
 				</div>
 				<div class="col">
-					<div class="row">
+					<div class="row" id="career_point">
 						<div class="col-5">
 							활동기간
 						</div>
@@ -342,22 +352,27 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-5 gx-1">
+						<div class="col-4 gx-1">
 							<div class="input-group input-group-sm">
-						  		<input class="form-control form-control-sm" type="date">
+						  		<input class="form-control form-control-sm" type="date" id= "career_dateRangeStart">
 						 		<span class="input-group-text input-group-text-sm">~</span>
-						 		<input class="form-control form-control-sm" type="date">
+						 		<input class="form-control form-control-sm" type="date" id= "career_dateRangeEnd">
 							</div>
 						</div>
 						<div class="col-2 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id= "career_companyName">
 						</div>
 						<div class="col-2 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id= "career_major">
 						</div>				
 						<div class="col-3 gx-1">
-							<input class="form-control form-control-sm" type="text">
+							<input class="form-control form-control-sm" type="text" id= "career_skill">
 						</div>
+						<div class="col">
+							<button type="button" class="btn btn-sm" onclick="addData(4);">
+								<i class="fa-solid fa-file-circle-plus"> 추가</i>
+							</button>
+						</div>		
 					</div>	
 				</div>
 			</div>
@@ -382,13 +397,101 @@
 		
 				
 		var count_school = 0;
+		var count_edu = 0;
+		var count_certi = 0;
+		var count_career = 0;
 	
 		function removeThis(id){
 			$(id).remove();
 		}
 		
-		function addData(){
+		function addData(key){
+			//key = 1.school 2.edu 3.certi 4.career
 			
+			var tmp = "";
+			var pointId = "";
+			
+			switch(key)
+			{
+				case 1:
+					pointId = "#school_point";
+					
+					var school_dateRangeStart = document.getElementById('school_dateRangeStart').value;
+					var school_dateRangeEnd = document.getElementById('school_dateRangeEnd').value;
+					var school_Name = document.getElementById('school_Name').value;
+					var school_type = document.getElementById('school_type').value;
+					var school_major = document.getElementById('school_major').value;
+					var school_locate = document.getElementById('school_locate').value;
+					
+					tmp += '<div class="row" id="'+'school'+ count_school +'">';
+				    tmp += '<div class="col-3">';
+				    tmp += school_dateRangeStart + '~' + school_dateRangeEnd;
+				    tmp += '</div>';
+				    tmp += '<div class="col-2">';
+				    tmp += school_Name;
+				    tmp += '</div>';
+				    tmp += '<div class="col-1">';
+				    tmp += school_type;
+				    tmp += '</div>';
+				    tmp += '<div class="col-2">';
+				    tmp += school_major;
+				    tmp += '</div>';
+				    tmp += '<div class="col-2">';
+				    tmp += school_locate;
+				    tmp += '</div>';
+				    tmp += '<div class="col-2">';
+				    tmp += '<button class="btn btn-sm" type="button" onclick="removeThis(school'+ count_school++ +');"><i class="fa-solid fa-xmark"></i></button>';
+				    tmp += '</div>';
+				    tmp += '</div>';
+				    
+					break;
+					
+				case 2:
+					pointId = "#edu_point";
+					
+					var edu_dateRangeStart = document.getElementById('edu_dateRangeStart').value;
+					var edu_dateRangeEnd = document.getElementById('edu_dateRangeEnd').value;
+					var edu_Name = document.getElementById('edu_Name').value;
+					var edu_content = document.getElementById('edu_content').value;
+					
+					tmp += '<div class="row" id="'+'edu'+ count_school +'">';
+				    tmp += '<div class="col-4">';
+				    tmp += edu_dateRangeStart + '~' + edu_dateRangeEnd;
+				    tmp += '</div>';
+				    tmp += '<div class="col-2">';
+				    tmp += edu_Name;
+				    tmp += '</div>'
+				    tmp += '<div class="col-2">';
+				    tmp += edu_content;
+				    tmp += '</div>';
+				    tmp += '<div class="col-4">';
+				    tmp += '<button class="btn btn-sm" type="button" onclick="removeThis(school'+ count_school++ +');"><i class="fa-solid fa-xmark"></i></button>';
+				    tmp += '</div>';
+				    tmp += '</div>';
+					
+					break;
+				case 3:
+					pointId = "#certi_point";
+					
+					var certi_date = document.getElementById('certi_date').value;
+					var certi_Name = document.getElementById('certi_Name').value;
+					var certi_source = document.getElementById('certi_source').value;
+					var certi_skill = document.getElementById('certi_skill').value;
+					break;
+				case 4:
+					pointId = "#career_point";
+					
+					var career_dateRangeStart = document.getElementById('career_dateRangeStart').value;
+					var career_dateRangeEnd = document.getElementById('career_dateRangeEnd').value;
+					var career_companyName = document.getElementById('career_companyName').value;
+					var career_major = document.getElementById('career_major').value;
+					var career_skill = document.getElementById('career_skill').value;
+					break;
+				default:
+					break;
+			}
+			
+			$(pointId).append(tmp);
 		}
 		
 		function addSchool() {
