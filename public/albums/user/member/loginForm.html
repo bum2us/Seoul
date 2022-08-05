@@ -4,51 +4,83 @@
 <meta charset="UTF-8">
 <title>alBum's Login</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/loginStyle.css">
 	<style>
 		div {
 			/* border: 1px orange solid; */
 		}
 	</style>
 </head>
-<body>
+<body style="background-color: #20232E;">
 	<form action="">
 		<div class="container">
 			<div class="row" style="margin-top: 200px;">
-				<div class="col">
-					<div class="row justify-content-center">
-						<div class="col-2">
-							<img width="190px" height="190px" src="../../../albums/images/logo.png">
+				<div class="col-9">
+					<div class="gallery">
+						<span style="--i:1;"><img src="../../images/temp01.jpg" alt=""></span>
+						<span style="--i:2;"><img src="../../images/temp02.jpg" alt=""></span>
+						<span style="--i:3;"><img src="../../images/temp03.jpg" alt=""></span>
+						<span style="--i:4;"><img src="../../images/temp04.jpg" alt=""></span>
+						<span style="--i:5;"><img src="../../images/temp05.jpg" alt=""></span>
+						<span style="--i:6;"><img src="../../images/tom.png" alt=""></span>
+						<span style="--i:7;"><img src="../../images/temp07.jpg" alt=""></span>
+						<span style="--i:8;"><img src="../../images/temp08.jpg" alt=""></span>
+						<span style="--i:9;"><img src="../../images/temp09.jpg" alt=""></span>
+						<span style="--i:10;"><img src="../../images/temp10.jpg" alt=""></span>
+						<span style="--i:11;"><img src="../../images/temp11.jpg" alt=""></span>
+						<span style="--i:12;"><img src="../../images/temp06.jpg" alt=""></span>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="row" style="object-fit: cover;">
+						<img src="../../images/logo.png" alt="">
+					</div>
+					<div class="row mb-3">
+						<div class="col gx-0">
+							<div class="inputBox">
+								<input type="text" required="required" id="loginId">
+								<span>USER ID</span>
+							</div>
 						</div>
 					</div>
-					<div class="row justify-content-center">
-						<div class="col-2">
-							<div class="row mb-1">
-								<div class="col">
-									<input type="text" class="form-control" placeholder="ID" style="width: 210px;" id ="login_Id">
-								</div>	
-							</div>
-							<div class="row mb-1">
-								<div class="col">
-									<input type="password" class="form-control" placeholder="PW" style="width: 210px;" id="login_Pw">
-								</div>
+					<div class="row mb-3">
+						<div class="col gx-0">
+							<div class="inputBox">
+								<input type="password" required="required" id="loginPw">
+								<span>PASSWORD</span>
 							</div>
 						</div>
-						<div class="col-1">
-							<button type="button" class="btn btn-dark" style="width: 80px; height: 80px;">로그인</button>
+					</div>
+					<div class="row">
+						<div class="col-4 p-0">
+							<a href="./main.html" style="--clr:#FF9F29">
+								<span></span><span></span><span></span><span></span>Login
+							</a>
 						</div>
-					</div>					
-					<div class="row justify-content-center">
-						<div class="col-3 text-center gx-0">
-							<button type="button" class="btn btn-dark p-0" style="width: 150px;" onclick="location.href='./regForm.html'">회원가입</button>
-							<button type="button" class="btn btn-dark p-0" style="width: 150px;" onclick="location.href='./findIdPwForm.html'">ID/PW 찾기</button>
+						<div class="col-4 p-0">
+							<a href="./regForm.html" style="--clr:#FF9F29">
+								<span></span><span></span><span></span><span></span>SignUp
+							</a>
+						</div>
+						<div class="col-4 p-0">
+							<a href="./findIdPwForm.html" style="--clr:#FF9F29">
+								<span></span><span></span><span></span><span></span>Find ID/PW
+							</a>
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</form>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/63aa3074b3.js" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>		
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/63aa3074b3.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		let login = document.querySelector("#login");
+
+		login.onclick = function() {
+			location.href ="mainForm.html";
+		}
+	</script>
 </body>
 </html>
