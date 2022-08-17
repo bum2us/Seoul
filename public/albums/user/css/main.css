@@ -13,13 +13,15 @@ img {
 }
 img:hover{
     /* filter: grayscale(50%); */
-    /* transform: scale(1.0005); */
-    transition:  all 0.5s ease;
+    transform: scale(1.1);
+    transition:  all 0.5s ease-in-out;
+    
 }
 .grid-wrapper > div{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .grid-wrapper > div > img{
     width: 100%;
