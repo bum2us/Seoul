@@ -10,11 +10,18 @@
 
 .brandLogo {
     height: 30px;
+    padding-bottom: 5%;
 }
 
 .brandName {
-    margin-left: 5px;
+    margin-left: 10px;
     font-size: 20pt;
+    font-weight: bold;
+    color: white;
+}
+
+.brandName2 {
+    color: red;
 }
 
 nav a{
@@ -24,7 +31,8 @@ nav a{
 }
 
 nav a:hover {
-    color: #fff;
+    color: red;
+    transition: .3s;
 }
 
 nav li {
