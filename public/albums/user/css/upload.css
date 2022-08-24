@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.title, .content {
+    background: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.title {
+    height: 100%;
+}
+
+.content {
+    padding-top: 5px;
+}
+
+.btt {
+    width: 90px;
+    height: 30px;
+    background: #000;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.btt:hover {
+    background: #fff;
+    color: #000;
+    transition: .3s;
+}

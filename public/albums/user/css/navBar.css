@@ -5,9 +5,52 @@
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans',sans-serif;
-    background-color: #000;
 }
 
+.logoImage {
+    height: 30px;
+}
+
+.logoName {
+    margin-left: 10px;
+    font-size: 20pt;
+    font-weight: bold;
+    color: white;
+}
+
+.logoName2 {
+    color: red;
+}
+nav li,a,i {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav_links{
+    list-style: none;
+    margin-top: 15px;
+}
+
+
+.nav_links li{
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.nav_links li a:horver {
+    color: #fff;
+}
+
+header {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: flex-end; */
+    align-items: center;
+    padding: 30px 10%;
+}
+
+/* 
 .brandLogo {
     height: 30px;
     padding-bottom: 5%;
@@ -24,21 +67,24 @@
     color: red;
 }
 
+nav{
+    background-color: #000;
+}
+
 nav a{
     text-decoration: none;
     color: #fff;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: red;
-    transition: .3s;
-}
-
-nav li {
-    margin-left: 30px;
+nav li {    
+    margin-right: 30px;
 }
 
 nav i {
     color: #fff;
 }
+
+nav form{
+    margin-left: 50px;
+} */
