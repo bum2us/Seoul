@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans',sans-serif;
 }
 
 label {
     font-weight: bold;
-    font-size: 14pt;
+    font-size: 13pt;
 }
 
 .title, .content {
@@ -15,6 +18,7 @@ label {
     border-radius: 5px;
     padding-left: 10px;
     width: 100%;
+    font-size: 9pt;
 }
 
 .title {
@@ -28,14 +32,20 @@ label {
 .btt {
     width: 90px;
     height: 30px;
-    background: #000;
+    background: #fff;
     border-radius: 5px;
-    color: white;
+    color: #000;
     font-weight: bold;
+    font-size: 10pt;
 }
 
 .btt:hover {
-    background: #fff;
-    color: #000;
+    background: #000;
+    color: #fff;
     transition: .3s;
+}
+
+.mainTitle {
+    font-weight: bold;
+    font-size: 18pt;
 }

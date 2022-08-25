@@ -7,8 +7,13 @@
     font-family: 'Noto Sans',sans-serif;
 }
 
+.logo {
+    margin-right: auto;
+}
+
 .logoImage {
     height: 30px;
+    margin-bottom: 9px;
 }
 
 .logoName {
@@ -29,6 +34,7 @@ nav li,a,i {
 .nav_links{
     list-style: none;
     margin-top: 15px;
+    margin-left: auto;
 }
 
 
@@ -47,44 +53,5 @@ header {
     justify-content: space-between;
     /* justify-content: flex-end; */
     align-items: center;
-    padding: 30px 10%;
+    padding: 10px 10%;
 }
-
-/* 
-.brandLogo {
-    height: 30px;
-    padding-bottom: 5%;
-}
-
-.brandName {
-    margin-left: 10px;
-    font-size: 20pt;
-    font-weight: bold;
-    color: white;
-}
-
-.brandName2 {
-    color: red;
-}
-
-nav{
-    background-color: #000;
-}
-
-nav a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-nav li {    
-    margin-right: 30px;
-}
-
-nav i {
-    color: #fff;
-}
-
-nav form{
-    margin-left: 50px;
-} */
