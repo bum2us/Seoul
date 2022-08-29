@@ -11,7 +11,7 @@
 
 .favoraite_card {
     position: relative;
-    width: 350px;
+    width: 300px;
     height: 190px;
     background-color: #d9d9d9;
     border-radius: 20px;
@@ -116,7 +116,7 @@
     outline: none;
     font-size: 1em;
     font-weight: 500;
-    background: green;
+    background: black;
     color: #fff;
     cursor: pointer;
 }
@@ -125,4 +125,8 @@
     border: 1px solid #999;
     color: #999;
     background: #fff;
+}
+
+.row {
+    margin-bottom: 100px;
 }
