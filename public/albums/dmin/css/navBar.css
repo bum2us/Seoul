@@ -33,10 +33,9 @@ nav li,a,i {
 
 .nav_links{
     list-style: none;
-    margin-top: 15px;
+    margin-top: 18px;
     margin-left: auto;
 }
-
 
 .nav_links li{
     display: inline-block;
@@ -59,4 +58,26 @@ header {
 .administrator {
     color: #fff;
     font-weight: 700;
+    margin: 0 30px 0 10px;
+}
+
+.profile {
+    margin: 0 0 0 40px;
+}
+
+.imgBox {
+    width: 30px;
+    height: 30px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logoutBtn {
+    background: transparent;
+    border: 0;
 }
