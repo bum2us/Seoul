@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <title>alBum's SignUp</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-	<style>
+<link rel="stylesheet" href="../css/style.css">
+    <style>
         div {
             /* border: 1px solid orange; */
         }
@@ -12,137 +13,105 @@
     </style>
 </head>
 <body>
-    <form action="">
-        <div class="container-md" >
-            <div class="row  justify-content-md-center">                
-                <div class="col col-lg-4">
-                    <div class="row my-3">
-                        <div class="col text-center">
-                            <br><br>
-                            <span style="font-weight: bold; font-size: 20pt;">회원가입</span>
+	<div class="container">
+        <br><br>
+		<div class="row justify-content-center">
+			<div class="col text-center">
+				<span class="page_title">회원 가입</span>
+			</div>
+		</div>
+		<form action="#">
+			<div class="row mt-4 searchForm">
+				<div class="col">
+					<div class="row my-4">
+						<div class="col-6">
+							<input type="text" placeholder="이름" name="name">
+						</div>
+						<div class="col-6">
+							<input type="text" placeholder="아이디" name="id">
+						</div>
+					</div>
+					<div class="row mb-4">
+						<div class="col-6">
+							<input type="text" placeholder="비밀번호" name="password">
+						</div>
+						<div class="col-6">
+							<input type="text" placeholder="비밀번호 확인">
+						</div>
+					</div>
+					<div class="row mb-4">
+						<div class="col-1">
+							<span style="font-size:9pt; text-align:right; font-weight: 600;">생년월일</span>
                         </div>
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col">
-                            <input type="text" class="form-control " id="reg_Name" placeholder="이름">
+                        <div class="col-4">
+							<input type="date" id="dob">
                         </div>
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col">
-                            <input type="text" class="form-control " id="reg_Id" placeholder="아이디">
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col">
-                            <input type="password" class="form-control " id="reg_Pw" placeholder="비밀번호">
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col">
-                            <input type="password" class="form-control " id="reg_PwRe" placeholder="비밀번호 확인">
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col">
-                            <input type="text" class="form-control " id="reg_Email" placeholder="이메일">
-                        </div>
-                    </div>
-                    <div class="row mb-2 gx-1">
+						<div class="col-3">
+							<select name="gender" id="gender" >
+								<option value="" disabled selected>성별</option>
+								<option value="1" >남</option>
+								<option value="2" >여</option>
+								<option value="3" >기타</option>
+							</select>
+						</div>
+						<div class="col-4">
+							<input type="text" name="nickname" placeholder="닉네임">
+						</div>
+					</div>
+                    <div class="row mb-4">
+						<div class="col-3">
+							<input type="text" name="email" placeholder="이메일"> 
+						</div>
                         <div class="col-2">
-                            <input type="text" class="form-control " id="reg_number_start" value="010">
+							<select name="gender" id="gender" >
+								<option value="" disabled selected>메일선택</option>
+								<option value="1" >naver.com</option>
+								<option value="2" >kakao.com</option>
+								<option value="3" >gmail.com</option>
+                                <option value="4" >직접입력</option>
+							</select>
+						</div>
+                        <div class="col-2">
+                            <select name="gender" id="gender" >
+								<option value="" disabled selected>통신사</option>
+								<option value="1" >SKT</option>
+								<option value="2" >KT</option>
+								<option value="3" >LG</option>
+                                <option value="4" >알뜰폰</option>
+							</select>
                         </div>
-                        <div class="col-4">
-                            <input type="text" class="form-control " id="reg_number_middle">
+                        <div class="col-1">
+                            <input type="text" value="010" style="text-align:center">
                         </div>
-                        <div class="col-4">
-                            <input type="text" class="form-control " id="reg_number_end">
+                        <div class="col-2">
+                            <input type="text" name="phone1" placeholder="XXXX" style="text-align:center">
                         </div>
-                        <div class="col-2 text-end">
-                            <button type="button" class="btn btn-dark"><span style="font-size: 10pt;">인증</span></button>
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col-5 pr-0">
-                            <div class="input-group">
-                                <span class="input-group-text">성별</span>
-                                <select class="form-select" id="reg_Gender">
-                                    <option value="1">남</option>
-                                    <option value="2">여</option>
-                                    <option value="3">기타</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-7">
-                            <div class="input-group">
-                                <span class="input-group-text">생년월일</span>
-                                <input type="date" class="form-control " id="reg_Dob" placeholder="생년월일">
-                            </div>
+                        <div class="col-2">
+                            <input type="text" name="phone2" placeholder="XXXX" style="text-align:center">
                         </div>
                     </div>
-                    <div class="row mb-2">
-                        <div class="col">
-                            <div class="input-group input-group-sm">
-                                <div class="input-group-text">
-                                    <input class="form-check-input" type="checkbox">
-                                </div>                              
-                                <input type="text" class="form-control" value="소식을 이메일로 받아봅니다.">
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col">
-                            <div class="input-group input-group-sm">
-                                <div class="input-group-text">
-                                    <input class="form-check-input" type="checkbox">
-                                </div>                              
-                                <input type="text" class="form-control" value="제공하는 서비스 약관에 동의합니다.">
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <button type="button" class="btn btn-dark btn-lg" style="width: 100%;">가입하기</button>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col">
-                            <span style="font-size:x-small;">다른 서비스 계정으로 가입</span>
-                        </div>
-                    </div>
-                    <hr class="mt-0">
-                    <div class="row text-center mb-1">
-                        <div class="col">
-                            <button type="button" class="btn p-0" style="width: 100%;">
-                                <img src="../images/네이버.png" alt="" style="display: block; width: 100%; height: auto;">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row text-center mb-1">
-                        <div class="col">
-                            <button type="button" class="btn p-0" style="width: 100%;">
-                                <img src="../images/구글.png" alt="" style="display: block; width: 100%; height: auto;">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row text-center mb-1">
-                        <div class="col">
-                            <button type="button" class="btn p-0" style="width: 100%;">
-                                <img src="../images/카카오.png" alt="" style="display: block; width: 100%; height: auto;">
-                            </button>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row gx-1 text-center">
-                        <div class="col">
-                            <a href="./loginForm.html" style="font-size:x-small; text-decoration-line: none; text-decoration-color: black; color: black; ">이미 가입하셨다면? 로그인</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-	
+					<div class="row mb-4">
+						<textarea name="comment" id="comment" cols="10" rows="7" placeholder="자기소개" style="padding: 10px; font-size: 10pt;"></textarea>
+					</div>
+					<div class="row mb-3 justify-content-end">
+						<button type="button" class="basebutton" onclick="location.href='loginForm.html'">이전</button>
+						<button type="button" class="basebutton">리셋</button>
+						<button type="submit" class="basebutton">가입</button>
+					</div>
+				</div>
+			</div>
+		</form>
+    </div>
+	<footer class="footer-bottom">
+		<ul class="socials">
+			<li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+			<li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+			<li><a href="#"><i class="fa-brands fa-square-google-plus"></i></a></li>
+			<li><a href="#"><i class="fa-brands fa-square-youtube"></i></a></li>
+			<li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+		</ul>
+		<p>copyright &copy;2022 ALBUM'S. designed by <span>bum2us</span></p>
+	</footer>
 	
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/63aa3074b3.js" crossorigin="anonymous"></script>
