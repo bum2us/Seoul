@@ -890,7 +890,7 @@ footer{
     position: relative;
     flex: 30%;
     height: 100%;
-    border: 0.5px solid black;
+    border: 0.5px solid #DBDBDB;
 }
 
 .post_rightSide .header {
@@ -898,11 +898,11 @@ footer{
     position: relative;
     width: 100%;
     height: 60px;
-    background: red;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    border-bottom: 1px solid #EFEFEF;
 }
 
 .post_rightSide .header .userImg {
@@ -922,61 +922,110 @@ footer{
     object-fit: cover;
 }
 
-.post_commentList {
+.comment_List {
     position: relative;
-    height: calc(100% - 110px);
+    height: calc(100% - 120px);
     overflow-y: hidden;
 }
 
-.post_commentList .block {
-    position: relative;
-    width: 100%;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    padding: 15px;
-    border-bottom: 0px;
+.comment_List ul {
+    margin: 0;
+    padding: 20px;
+    list-style: none;
 }
 
-.post_commentList .block .imgBox {
-    position: relative;
+.commentBlock {
+    justify-content: center;
+}
+
+.comment_user_imgBox {
     width: 45px;
     height: 45px;
     overflow: hidden;
     border-radius: 50%;
-}
-
-.post_commentList .block .details {
+    align-items: center;
     position: relative;
+}
+
+.comment_user_imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
-.post_commentList .block .listhead {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
+.comment_userName{
+    float: left;
 }
 
-.post_commentList .block .listhead h4{
-    font-size: 15pt;
+.comment_userName h3{
+    margin-top: 5px;
+    font-size: 10pt;
     font-weight: 700;
-    color: #555;
 }
 
-.post_commentList .block .listhead .time {
-    font-size: 9pt;
-    color: #999;
+.comment_content span {
+    font-size: 10pt;
 }
-.comment_p { 
+
+.comment_info {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-.comment_p p {
-    color: #666;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-}
-/* https://www.youtube.com/watch?v=2vfT5nwNvNo */
 
+.comment_info span{
+    flex: 1;
+    font-size: 8pt;
+}
+
+.comment_info button {
+    flex: 1;
+    background: none;
+    border: none;
+    font-size: 8pt;
+    width: 80px;
+}
+
+.comment_like {
+    vertical-align: middle;
+}
+
+.comment_like i{
+    color: #000;
+    font-size: 10pt; 
+}
+.comment_input {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    display: flex;
+    border-top: 1px solid #EFEFEF;
+}
+.comment_input form{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: baseline;
+    width: 100%;
+}
+
+.comment_input i {
+    color: #000;
+    font-size: 14pt;
+}
+
+.comment_input textarea{
+    margin: 0px 10px;
+    width: 100%;
+    border: none;    
+    font-size: 9pt;
+    outline: none;
+    resize: none;
+    padding-top: 15px;
+}
