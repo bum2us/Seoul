@@ -924,7 +924,7 @@ footer{
 
 .comment_List {
     position: relative;
-    height: calc(100% - 120px);
+    height: calc(100% - 180px);
     overflow-y: hidden;
 }
 
@@ -938,7 +938,7 @@ footer{
     justify-content: center;
 }
 
-.comment_user_imgBox {
+.comment_header {
     width: 45px;
     height: 45px;
     overflow: hidden;
@@ -947,7 +947,7 @@ footer{
     position: relative;
 }
 
-.comment_user_imgBox img {
+.comment_header img {
     position: absolute;
     top: 0;
     left: 0;
@@ -956,34 +956,33 @@ footer{
     object-fit: cover;
 }
 
-.comment_userName{
-    float: left;
+.comment_body {
+    padding-top: 3px;
 }
 
-.comment_userName h3{
+.comment_content{
+    float: left;
+    margin-right: 10px;
+    font-size: 10pt;
+}
+
+.comment_userName{
     margin-top: 5px;
     font-size: 10pt;
     font-weight: 700;
 }
 
-.comment_content span {
-    font-size: 10pt;
-}
-
 .comment_info {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    float: left;
 }
 
 .comment_info span{
-    flex: 1;
     font-size: 8pt;
 }
 
 .comment_info button {
-    flex: 1;
     background: none;
     border: none;
     font-size: 8pt;
@@ -998,6 +997,40 @@ footer{
     color: #000;
     font-size: 10pt; 
 }
+
+.post_info {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    display: flex;
+    border-top: 1px solid #EFEFEF;
+}
+
+.post_function {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.post_function i{
+    color: #000;
+    font-size: 14pt;
+}
+.post_like{
+    font-size: 10pt;   
+}
+
+.post_likeCount{
+    font-weight: bold;
+}
+
+.post_time span{
+    margin-top: 3px;
+    font-size: 6pt;
+    color: #555;
+}
+
 .comment_input {
     position: relative;
     width: 100%;
