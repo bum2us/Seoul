@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Form>
+
+        <input type="file" multiple="multiple" id="img">
+        <br><br>
+        <button type="button" onclick="fileUpload()"> 확인하기 </button>
+        <br><br>
+        <div id="listdiv">
+
+        </div>
+        <input type="text" id="print" placeholder="총 합이 나오는 곳">
+        <div class="row my-4" style="height:100px;" id="ifmmUploadedImage1View">
+            <input class="form-control form-control-sm" id="ifmmUploadedProfileImage2" name="ifmmUploadedProfileImage2"
+                type="file" multiple="multiple" onChange="upload('ifmmUploadedProfileImage2', 0, 1, 1, 0, 0, 1);">
+        </div>
+        <div class="row my-4" style="height:400px;">
+            <input class="form-control form-control-sm" id="ifmmUploadedProfileImage" name="ifmmUploadedProfileImage"
+                type="file" multiple="multiple" onChange="upload('ifmmUploadedProfileImage', 0, 1, 1, 0, 0, 3);">
+            <img id="imgProfile" src="" alt="사진" style="width:300px; height:300px; border-radius:50%;">
+        </div>
+        <div class="row my-4" style="height:100px;">
+            <input class="form-control form-control-sm" id="ifmmUploadedProfileImage3" name="ifmmUploadedProfileImage3"
+                type="file" multiple="multiple" onChange="upload('ifmmUploadedProfileImage3', 0, 1, 1, 0, 0, 2);">
+            <ul id="ulFile0">
+
+            </ul>
+        </div>
+    </Form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/63aa3074b3.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+
+    fileUpload = function () {
+
+        var files = document.getElementById("img").files;
+        var totalSize = 0;
+
+        //alert(files);
+        //alert(files.length);
+
+        for (var i = 0; i < files.length; i++) {
+            totalSize += files[i].size;
+            document.getElementById("listdiv").append(files[i].size + ' + ');
+        }
+
+        document.getElementById("print").value = totalSize;
+
+    }
+
+</script>
+
+<script>
+
+    upload = function (objName, seq, allowedMaxTotalFileNumber, allowedExtdiv, allowedEachFileSize, allowedTotalFileSize, uiType) {
+
+        var totalFileSize = 0;
+        var obj = $("#" + objName + "")[0].files;
+        var fileCount = obj.length;
+
+        if (uiType == 1) {
+
+
+            for (var i = 0; i < fileCount; i++) {
+
+                var divImage = "";
+                divImage += '<div style="display: inline-block; height: 95px;">';
+                divImage += '	<img id="aaa' + i + '" src="" class="rounded" width= "85px" height="85px" >';
+                divImage += '	<div style="position: relative; top:-85px; left:5px"><span style="color: red;">X</span></div>';
+                divImage += '</div> ';
+
+                $("#ifmmUploadedImage1View").append(divImage);
+
+                var fileReader = new FileReader();
+
+                fileReader.onload = function () {
+                    $("#aaa" + i).attr("src", fileReader.result);
+                }
+
+
+
+                fileReader.readAsDataURL($("#" + objName + "")[0].files[i]);
+            }
+
+        } else if (uiType == 2) {
+            $("#ulFile" + seq).children().remove();
+
+            for (var i = 0; i < fileCount; i++) {
+                addUploadLi(seq, i, $("#" + objName + "")[0].files[i].name);
+            }
+        } else if (uiType == 3) {
+            var fileReader = new FileReader();
+            fileReader.readAsDataURL($("#" + objName + "")[0].files[0]);
+
+            fileReader.onload = function () {
+                $("#imgProfile").attr("src", fileReader.result);		/* #-> */
+            }
+        } else {
+            return false;
+        }
+        return false;
+    }
+
+    addUploadLi = function (seq, index, name) {
+
+        var ul_list = $("#ulFile0");
+
+        li = '<li id="li_' + seq + '_' + index + '" class="list-group-item d-flex justify-content-between align-items-center">';
+        li = li + name;
+        li = li + '<span class="badge bg-danger rounded-pill" onClick="delLi(' + seq + ',' + index + ')"><i class="fa-solid fa-x" style="cursor: pointer;"></i></span>';
+        li = li + '</li>';
+
+        $("#ulFile" + seq).append(li);
+    }
+
+
+    delLi = function (seq, index) {
+        $("#li_" + seq + "_" + index).remove();
+    }
+
+</script>
+
+</html>
+
+
+
+
+
+upmSeq as upSeq
+,upmDefaultNy as upDefaultNy
+,upmSort as upSort
+,upmExt as upExt
+,upmOriginalName as upOriginalName
+,upmUuidName as upUuidName
+,upmDelNy as upDelNy
+,upmSize as upSize
+,upmType as upType
+,upmPat as upPat

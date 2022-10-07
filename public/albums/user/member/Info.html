@@ -40,3 +40,71 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>		
 </body>
 </html>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                <div class="form-check g-2">
+                    <input class="form-check-input" type="checkbox" value="" id="listCheck">
+                </div>
+            </th>
+            <th>순번</th>
+            <th>시퀸스</th>
+            <th>아이디 </th>
+            <th>패스워드 </th>
+            <th>이름 </th>
+            <th>성별 </th>
+            <th>등급</th>
+            <th>이메일주소</th>
+            <th>이메일도메인</th>
+            <th>핸드폰번호</th>
+            <th>생년월일</th>
+            <th>이메일수신동의</th>
+            <th>SMS수신동의</th>
+            <th>생년월일로그인</th>
+            <th>sns로그인</th>
+        </tr>
+    </thead>
+    <tbody>
+    <c:set var="listCodeGender" value="${CodeServiceImpl.selectListCachedCode('1')}"/>
+    <c:choose>
+        <c:when test="${fn:length(list) eq 0}">
+            <tr>
+                <td class="text-center" colspan="9">There is no data!</td>
+            </tr>
+        </c:when>
+        <c:otherwise>
+            <c:forEach items="${list}" var="list" varStatus="status">
+            <tr>
+                <td>
+                    <div class="form-check g-2">
+                        <input class="form-check-input" type="checkbox" name="checkboxSeq" value="<c:out value="${list.ifmmSeq}" id="listCheck">
+                    </div>
+                </td>
+                <td>${status.count}</td>
+                <td><c:out value="${list.ifmmSeq}"/></td>
+                <td><c:out value="${list.ifmmId}"/></td>
+                <td><c:out value="${list.ifmmPassword}"/></td>
+                <td><c:out value="${list.ifmmName}"/></td>
+                <td>
+                    <c:forEach items="${list.CodeGender}" var="listGender" varStatus="statusGender">
+                        <c:if test="${list.ifmmGender eq listGender.cdSeq}"><c:out value="${listGender.cdName}"/></c:if>
+                    </c:forEach>	
+                </td>
+                <td><c:out value="${list.ifmmGrade}"/></td>
+                <td><c:out value="${list.ifmmEmailAddress}"/></td>
+                <td><c:out value="${list.ifmmEmailDomain}"/></td>
+                <td><c:out value="${list.ifmmPhone}"/></td>
+                <td><c:out value="${list.ifmmDob}"/></td>
+                <td><c:out value="${list.ifmmEmailNy}"/></td>
+                <td><c:out value="${list.ifmmSmsNy}"/></td>
+                <td><c:out value="${list.ifmmDobLoginNy}"/></td>
+                <td><c:out value="${list.ifmmSnsLogin}"/></td>
+            </tr>
+            </c:forEach>
+        </c:otherwise>	
+    </c:choose>	
+    </tbody>	
+</table>
